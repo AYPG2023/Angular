@@ -20,22 +20,4 @@ const [total, taxt] = taxCalcultaion({
 console.log('Total', total);
 console.log('Tax', taxt);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export {};
