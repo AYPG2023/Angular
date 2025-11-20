@@ -1,0 +1,21 @@
+function classDecorator<T extends { new (...args: any[]): {} }>(
+  constructor: T
+) {
+  return class extends constructor {
+    newProperty = "New property";
+    hello = "override";
+  };
+}
+
+@classDecorator
+export class SuperClass {
+  public myPropert: string = "Hello World";
+  print() {
+    console.log("Hola Mundo desde un decorador");
+  }
+}
+
+console.log(SuperClass);
+
+const myClass = new SuperClass();
+console.log(myClass);
